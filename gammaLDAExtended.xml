@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Module name="LDA Gibbs">
+	<Owner>Alibek JAKUPOV</Owner>
+	<Description>LDA implementation returning three datsets - gamma, topterms, toptopics</Description>
+	<Language name="R" sourceFile="gammaLDAExtended.R" entryPoint="gammaLDAExtended"/>
+	<Ports>
+		<Output id="ldaOutTerms" name="Top terms" type="DataTable">
+			<Description>LDA top terms</Description>
+		</Output>
+		<Output id="toptopics" name="Top topics" type="DataTable">
+			<Description>LDA top topics per doc</Description>
+		</Output>	
+		<Output id="gamma" name="Gamma" type="DataTable">
+			<Description>LDA gamma distribution</Description>
+		</Output>
+		<Input id="dataset1" name="Initial Data" type="DataTable">
+			<Description>Input dataset</Description>
+		</Input>
+		<Input id="dataset2" name="Number of topics" type="DataTable">
+			<Description>Number of topics for LDA</Description>
+		</Input>
+	</Ports>
+</Module>
